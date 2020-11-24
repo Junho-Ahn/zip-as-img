@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="res/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+<!--	<script src="res/jquery-3.4.1.min.js"></script>-->
+	<script src="res/jszip.min.js"></script>
+	<script src="res/FileSaver.min.js"></script>
+	<script src="res/cover.js"></script>
+	<script src="res/script.js"></script>
+	<title>zip as img</title>
+</head>
+<body>
+	<div id="dropzone">
+		<div class="text">
+			<div class="bigLetter"></div>
+			<div class="warning"><div class="mobile">※</div>디렉토리 첨부 불가<div class="mobile">-</div>별도로 압축하여 첨부</div>
+			<div id="console"></div>
+		</div>
+		<div class="cover">
+			<img id="cover-preview" alt="커버 불러오는 중...">
+			<p>커버 이미지 선택</p>
+		</div>
+	</div>
+	<input type="file" id="coverform">
+	<input type="file" id="fileform" multiple>
+</body>
+</html>

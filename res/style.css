@@ -1,0 +1,97 @@
+* {
+	padding     : 0;
+	margin      : 0;
+	box-sizing  : border-box;
+	text-align  : center;
+	white-space : nowrap;
+	cursor      : copy;
+}
+
+input {
+	display : none;
+}
+
+.bigLetter {
+	font-size : 46px;
+}
+
+.bigLetter::before {
+	content : '드래그&드롭 또는 클릭으로 파일 첨부';
+}
+
+.warning {
+	color : firebrick;
+}
+
+#dropzone {
+	width            : 100vw;
+	height           : 100vh;
+	box-sizing       : border-box;
+	background-color : white;
+	display          : flex;
+	flex-direction   : column;
+	justify-content  : center;
+	align-items      : center;
+}
+
+#dropzone .text > * {
+	margin : 30px 0;
+}
+
+.cover {
+	border-radius : 4px;
+	box-shadow    : 0 0 4px 1px rgba(220, 20, 60, 0.7);
+	padding       : 12px 8px;
+	background    : aliceblue;
+}
+
+.gauge {
+	width      : 150px;
+	height     : 20px;
+	background : antiquewhite;
+	box-shadow : 0 0 2px 1px coral;
+	overflow   : hidden;
+}
+
+.bar {
+	height     : 100%;
+	background : coral;
+}
+
+img {
+	max-width  : 80vw;
+	max-height : 30vh;
+	margin     : 6px;
+}
+
+p {
+	font-size     : 20px;
+	color         : #333;
+	padding       : 14px 0;
+	font-weight   : 700;
+	margin        : 0 10px;
+	cursor        : pointer;
+	border        : 2px dashed cornflowerblue;
+	border-radius : 4px;
+}
+
+.mobile {
+	display : inline;
+}
+
+@media (max-width : 795px) {
+	.bigLetter::before {
+		content   : '터치해서 파일 첨부';
+		font-size : 24px;
+	}
+	
+	.mobile {
+		display : block;
+		height  : 8px;
+		opacity : 0;
+	}
+	
+	p {
+		font-size : 16px;
+	}
+}
